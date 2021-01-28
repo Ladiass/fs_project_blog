@@ -1,7 +1,7 @@
 <?php
-    $host = "localhost";
-    $name = "root";
-    $pass = "";
+    $host = "db4free.net";
+    $name = "ladiass";
+    $pass = "tss010430";
     $dbName = "ling_blog";
 
     $conn = new mysqli($host,$name,$pass,$dbName);
