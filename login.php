@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php 
+    session_start();
+    if(isset($_SESSION["user_details"])){header("Location: /");};
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,14 +59,16 @@
             <div class="flex justify-center items-center h-screen">
                 <div class=" h-80 max-h-80 py-5 px-7 shadow-inner flex justify-center items-center relative">
                     <div class="form absolute h-full w-full" data-tilt></div>
+
                     <form action="/methods.php" method="POST" class="text-center z-50">
                         <p class="text-white font-bold text-3xl mb-10 absolute top-7 left-1/2 transform -translate-x-1/2">Login</p>
+                        <input type="hidden" name="action" value="Login">
                         <div class="relative">
                             <input type="text" name="username" id="username">
                             <label for="username" class="text-gray-300 absolute ml-2 ">Username</label>
                         </div>
                         <div class="relative">
-                            <input type="password" name="pass" id="password">
+                            <input type="password" name="password" id="password">
                             <label for="password" class="text-gray-300 absolute ml-2">Password</label>
                         </div>
                         <input type="submit" value="Login"  class="py-2 px-5 block mx-auto cursor-pointer rounded-full  outline-none bg-pinker hover:bg-pinker active:bg-pinker">

@@ -1,0 +1,6 @@
+{
+    "name": "limxi/dist",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.2"
+    }
+}
